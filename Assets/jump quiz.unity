@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18365869, g: 0.22912797, b: 0.30511057, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7340,6 +7340,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2de2bd90fab89b544844df22c16149a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arrowPrefab: {fileID: 0}
+  arrowSpawnPoint: {fileID: 0}
+  drawStrength: 30
 --- !u!65 &1892348504
 BoxCollider:
   m_ObjectHideFlags: 0

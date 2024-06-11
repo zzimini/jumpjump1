@@ -7,6 +7,10 @@ TagManager:
   - CinemachineTarget
   - Block
   - PlayerHand
+  - Enemy
+  - Target
+  - Bullet
+  - Arrow
   layers:
   - Default
   - TransparentFX
