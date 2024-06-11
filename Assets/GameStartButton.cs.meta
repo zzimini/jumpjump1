@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/ArrowScoreManager.cs.meta
+guid: fec3c463400546e439c5075d5396eede
+========
+guid: b9e1975f1fcffa24a994672156816319
+>>>>>>>> parent of b183ecd (gg):Assets/GameStartButton.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

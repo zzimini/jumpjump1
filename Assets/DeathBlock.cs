@@ -10,42 +10,46 @@ public class DeathBlock : MonoBehaviour
     {
         if (other.gameObject == player)
         {
-            ScoreManager.instance.ResetScore(); // 점수와 블록 상태 초기화
             StartCoroutine(ResetPlayerPosition());
         }
     }
 
     IEnumerator ResetPlayerPosition()
     {
+        // Disable player controls
         var thirdPersonController = player.GetComponent<ThirdPersonController>();
         var characterController = player.GetComponent<CharacterController>();
         var rigidbody = player.GetComponent<Rigidbody>();
 
-        if (thirdPersonController != null) thirdPersonController.enabled = false;
-        if (characterController != null) characterController.enabled = false;
+        thirdPersonController.enabled = false;
+        characterController.enabled = false;
 
+        // Temporarily disable physics interactions
         if (rigidbody != null)
         {
             rigidbody.velocity = Vector3.zero;
             rigidbody.angularVelocity = Vector3.zero;
-            rigidbody.isKinematic = true;
+            rigidbody.isKinematic = true; // Temporarily set to kinematic
         }
 
         yield return new WaitForSeconds(2);
 
+        // Reset player position
         player.transform.position = CheckPointBlock.ori;
-        player.transform.rotation = Quaternion.identity;
+        player.transform.rotation = Quaternion.identity; // Reset rotation if needed
 
+        // Wait briefly to ensure the position is set
         yield return new WaitForSeconds(0.1f);
 
+        // Re-enable player controls and Rigidbody physics
         if (rigidbody != null)
         {
-            rigidbody.isKinematic = false;
-            rigidbody.velocity = Vector3.zero;
+            rigidbody.isKinematic = false; // Re-enable physics interactions
+            rigidbody.velocity = Vector3.zero; // Ensure the velocity is reset again
             rigidbody.angularVelocity = Vector3.zero;
         }
 
-        if (characterController != null) characterController.enabled = true;
-        if (thirdPersonController != null) thirdPersonController.enabled = true;
+        characterController.enabled = true;
+        thirdPersonController.enabled = true;
     }
 }

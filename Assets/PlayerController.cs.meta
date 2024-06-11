@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/FireBullet2.cs.meta
+guid: 7dce94f9f00b4f044a19ffff8bf97fcf
+========
+guid: 796bba98812ffaa43b52d5555e0d2e9e
+>>>>>>>> parent of b183ecd (gg):Assets/PlayerController.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
